@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Represents the model which is an array.
  */
-public class ArrayModel {
+public class ArrayModel implements IModel {
 
   private final Integer[] integers;
 
@@ -23,9 +23,6 @@ public class ArrayModel {
     Collections.shuffle(temp);
 
     this.integers = temp.toArray(new Integer[temp.size()]);
-    System.out.println(this.integers);
 
   }
-
-
 }
