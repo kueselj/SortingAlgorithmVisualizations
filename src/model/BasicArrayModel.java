@@ -5,16 +5,16 @@ import java.util.*;
 /**
  * Represents the model which is an array.
  */
-public class ArrayModel implements IModel {
+public class BasicArrayModel implements IArrayModel {
 
-  private final Integer[] integers;
+  private  Integer[] integers;
 
   /**
    * Basic constructor for an ArrayModel. Returns a randomly ordered array with integers from 1
    * to the specified integer.
    * @param numIntegers the size of the array.
    */
-  public ArrayModel(int numIntegers) {
+  public BasicArrayModel(int numIntegers) {
     List<Integer> temp = new ArrayList<Integer>();
 
     for (int i = 0; i < numIntegers; i ++) {
@@ -23,6 +23,11 @@ public class ArrayModel implements IModel {
     Collections.shuffle(temp);
 
     this.integers = temp.toArray(new Integer[temp.size()]);
+  }
 
+
+  @Override
+  public void setArray(Integer[] array) {
+    this.integers = array;
   }
 }

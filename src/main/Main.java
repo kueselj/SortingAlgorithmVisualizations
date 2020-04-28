@@ -1,10 +1,10 @@
 package main;
 
-import model.ArrayModel;
-import model.IModel;
+import model.BasicArrayModel;
+import model.IArrayModel;
 
 public final class Main {
   public static void main(String[] args) {
-    IModel model = new ArrayModel(10);
+    IArrayModel model = new BasicArrayModel(10);
   }
 }
