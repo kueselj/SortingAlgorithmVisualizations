@@ -5,9 +5,13 @@ package view;
  */
 public interface IView {
 
+  void makeVisible();
+
   /**
-   * Refreshes the view.
+   * Sets the integers for the view to use.
+   * @param integers the integers for the view to use.
    */
-  void refresh();
+  void setIntegers(Integer[] integers);
+
 
 }

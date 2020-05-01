@@ -8,6 +8,7 @@ import java.util.*;
 public class BasicArrayModel implements IArrayModel {
 
   private  Integer[] integers;
+  private static final Random RANDOM_VARIABLE = new Random(10);
 
   /**
    * Basic constructor for an ArrayModel. Returns a randomly ordered array with integers from 1
@@ -20,9 +21,14 @@ public class BasicArrayModel implements IArrayModel {
     for (int i = 0; i < numIntegers; i ++) {
       temp.add(i + 1);
     }
-    Collections.shuffle(temp);
+    Collections.shuffle(temp, RANDOM_VARIABLE);
 
     this.integers = temp.toArray(new Integer[temp.size()]);
+  }
+
+  @Override
+  public Integer[] getArray() {
+    return this.integers.clone();
   }
 
 
